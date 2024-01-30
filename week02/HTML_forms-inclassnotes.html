@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width. initial-scale=1">    
+        <title>HTML Forms and Inputs</title>
+    </head>
+    <body>
+       <p>Here is a form containing basic input types. For more info see
+        <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">
+            W3 schools</a>
+       </p>
+       <!-- form action usually contains a file to process the form data,
+    it could be a third party API or local like contact.php  -->
+       <form action="#" method="POST" name="sampleForm" target="_self">
+        <fieldset>
+            <legend>Simple Text Inputs</legend>
+            <p>the box and title are created by using the fieldset 
+                and legend tags.</p>
+                <label for="FirstName">First Name</label>
+                <input name="FirstName" type="text" required/>
+                <p>this text input has a mac character length annd placeholder text.</p>
+                <label for="LastName">Last Name</label>
+                <input name="LastName" type="text" 
+                placeholder="Last Name" maxlength="15"/>
+                <label for="age">Your age</label>
+                <input name="age" type="number" min="0" max="100"/>
+        </fieldset>
+        <fieldset>
+            <legend> Textarea Tag</legend>
+            <p>text area tags are great for longer text answers, sentences or paragraph</p>
+            <label for="WhyIDM">Why IDM?</label>
+            <textarea name="WhyIDM" cols="50" rows="10"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Check Boxes</legend>
+            <p>check boxes allow uses to select more than 1 option at once.
+                checkboxes in same group have same name but different values!
+            </p>
+            <label for="Pet">What pets do you have?</label>
+            <br/>
+            <input type="checkbox" name="Pet" value="Dog"/>Dog
+            <br/>
+            <input type="checkbox" name="Pet" value="Cat"/>Cat
+            <br/>
+            <input type="checkbox" name="Pet" value="Bunny"/>Bunny
+            <br/>
+            <input type="checkbox" name="Pet" value="Unicorn"/>UNICORN
+
+        </fieldset>
+        <fieldset>
+            <legend> Radio Buttons</legend>
+            <p>Radio Buttons allow uses to select m 1 option per group.
+                Radio Buttons in same group have same name but different values!
+            </p>
+            <label for="Pet">What pets is ur fav?</label>
+            <br/>
+            <input type="radio" name="Pet" value="Dog"/>Dog
+            <br/>
+            <input type="radio" name="Pet" value="Cat"/>Cat
+            <br/>
+            <input type="radio" name="Pet" value="Bunny"/>Bunny
+            <br/>
+            <input type="radio" name="Pet" value="Unicorn"/>UNICORN
+        </fieldset>
+        <fieldset>
+            <legend>Select Options</legend>
+            <p>using the select and option tags, u canadd items to a dropdown menu</p>
+            <label for="State">Pick a state!</label>
+            <br/>
+            <select name="State">
+                <option value="NY">New York</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="CA">California</option>
+
+            </select>
+        </fieldset>
+        <p>finally we use a button to submit our form</p>
+        <input name="Submit" value="Submit" type="button" disabled/>
+        <button role="button">Contact us!</button>
+       </form>
+       
+    </body>
+</html>
