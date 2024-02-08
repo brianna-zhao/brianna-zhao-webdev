@@ -49,6 +49,23 @@
                 visibility: hidden;
                 transition: opacity 0.9s;
             }
+
+            ul li ul li{
+                background: #555;
+                display: block;
+                color: #fff;
+                text-shadow: 0 -1px 0 #000;
+            }
+
+            ul li ul li:hover{
+                background: #666;
+            }
+
+            ul li:hover ul{
+                display: block;
+                opacity: 1;
+                visibility: visible;
+            }
         </style>
     </head>
     <body>
