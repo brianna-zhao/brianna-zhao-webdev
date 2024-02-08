@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width. initial-scale=1">
+        <title>CSSnotes</title>
+        <style type="text/CSS">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+        body{
+            font-family: 'Protest Riot', 'Geneva', Tahoma, sans-serif;
+        }
+        /* cover the top part */
+        nav{
+            background-color: beige;
+        }
+        ul{
+            /* remove all bullte point */
+            /* list-style-type: none; */
+            overflow:hidden;
+            background-color: cornflowerblue;
+            /* make parent element font size zero when using inline
+            block to get rid of tiny space between letters
+            cus inline usually for text*/
+            font-size: 0px;
+        }
+        li{
+            /* li display block by default, don't want to share horizontal
+            space with other element, we're making li display inline block
+            gives is benefit of block and inline */
+            display:inline-block;
+            font-size: 1rem;
+            width: 200px;
+
+        }
+        li a{
+            /* descendent seletor looking 4 this pattern */
+            display: block;
+            text-align: center;
+            /* make it a big chunky clickable area, not just text itself */
+            width: 100px;
+            padding: 10px;
+            text-decoration: none;
+            color: rgb(13, 89, 156);
+        }
+/* highlight the active page in meau */
+        li a.active{
+            background-color: chocolate;
+
+        }
+        li a:hover{
+            background-color: rgba(0,0,0,0.1);
+            color:#FFF;
+        }
+        </style>
+       </head>
+
+    <body>
+        <header>
+           <nav>
+            <ul>
+             <li><a href="#">Link 1</a></li> 
+             <li><a class = "active"href="#">Link 2</a></li> 
+             <li><a href="#">Link 3</a></li> 
+             <li><a href="#">Link 4</a></li> 
+            </ul>
+           </nav> 
+        </header>
+    </body>
+<html        
