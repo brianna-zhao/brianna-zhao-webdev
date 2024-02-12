@@ -1,6 +1,8 @@
 *{
     margin: 0;
     padding: 0;
+    border-radius: 20px;
+    background-color: black;
 }
 header{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -28,6 +30,7 @@ header{
     box-shadow: 0 0 5px hotpink;
 }
 header ul{
+    background-color: aliceblue;
     margin:15px;
     display: inline;
     text-align: center;
@@ -85,6 +88,7 @@ body{
     position: relative;
     top:100px;
     width: 100%;
+
 }
 body h1{
     padding: 10px 15px 10px 15px;
@@ -129,12 +133,15 @@ body nav{
     font-size: large;
     text-align: center;
     margin: 10px 40px 10px 40px;
-    padding: 10px 40px 10px 40px;
+    padding: 10px 40px 10px 40px;    
     /* padding: 15px; */
 }
 
-body nav ul{
+body nav ul li{
     list-style-type: none;
+    background-color: aliceblue;
+    border-radius: 0px;
+
 }
 
 
@@ -147,16 +154,26 @@ body ol{
     line-height: 35px;
 
 }
-
+body ol li{
+    background-color: aliceblue;
+}
 .pic{
     position: relative;
 }
 
-footer{
+footer {
+    background-color: lightpink;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: xx-large;
-    background-color: lightpink;
     text-shadow: -1px -1px 1px hotpink;
     text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    left: 25%;
+    padding: 10px;
+}
 
+footer a{
+    background-color: lightpink;
 }
