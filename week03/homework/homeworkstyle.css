@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: fixed;
+    top:0;
+    right:0px;
+    margin: 0, 20px, 20px, 20px;
+    padding: 10px;
+    background-color: aliceblue;
+    z-index: 100;
+}
+.logo{
+    position: fixed;
+    top:0 ;
+    left:0;
+    /* position:relative; */
+    text-align: center;
+    font-size: xx-large;
+    color: lightpink;
+    text-shadow: -1px -1px 0 hotpink;
+    margin:0,0,20px,20px;
+    padding: 20px;
+    background-color: aliceblue;
+}
+header ul{
+    margin:15px;
+    display: inline;
+    text-align: center;
+    position: relative;
+    right:0;
+    top:10%;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 7px 15px 7px;
+    background-color: lightpink;
+    box-shadow: 0,0,0.5px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: all 0.9s;
+}
+header ul li:hover{
+    background-color: #555;
+    color: #fff;
+}
+header ul li ul{
+    padding: 5px;
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    width: 150px;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.9s;
+}
+
+header ul li ul li{
+    margin: 5px;
+    padding: 10px;
+    background: #555;
+    display: block;
+    color: #fff;
+    text-shadow: 0 -1px 0 #000;
+}
+
+header ul li ul li:hover{
+    background: lightpink;
+}
+
+header ul li:hover ul{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    top:100px;
+    width: 100%;
+}
+body h1{
+    padding: 10px 15px 10px 15px;
+    text-align: center;
+    display: inline-block;
+    color: rgb(62, 33, 23);
+    background-color: bisque;
+    position: relative;
+    width: 50%;
+    left:25%;
+    font-weight: bold;
+}
+
+body p{
+    background-color: aliceblue;
+    position: relative;
+    width: 80%;
+    display: inline-block;
+    left:10%;
+    padding:15px;
+    font-size: larger;
+
+}
+
+body h2{
+    padding: 10px 15px 10px 15px;
+    text-align: center;
+    background-color: lightpink;
+    text-shadow: -1px -1px 1px hotpink;
+}
+
+/* body ul li{
+    background-color: aliceblue;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+} */
+body nav{
+    background-color: aliceblue;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    margin: 10px 40px 10px 40px;
+    padding: 10px 40px 10px 40px;
+    /* padding: 15px; */
+}
+
+body ol{
+    background-color: aliceblue;
+    font-weight: bold;
+    font-size: large;
+    margin: 10px 40px 10px 40px;
+    padding: 10px 40px 10px 40px;
+}
+
+.pic{
+    position: relative;
+}
+
+footer{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    background-color: lightpink;
+    text-shadow: -1px -1px 1px hotpink;
+    text-align: center;
+
+}
