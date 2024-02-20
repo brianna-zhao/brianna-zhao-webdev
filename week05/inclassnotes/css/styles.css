@@ -90,4 +90,9 @@ img{
     .container{
         flex-direction: column;
     }
+
+    .self-stretch{
+        height:300px;
+        width: auto;
+    }
 }
