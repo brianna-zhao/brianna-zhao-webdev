@@ -95,4 +95,94 @@ img{
         height:300px;
         width: auto;
     }
+} 
+/* classic layout example */
+header{
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    background-color: aqua;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.grid-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: bisque;
+}
+
+.grid-item{
+    width: 23%;
+    margin: 1%;
+}
+
+.secondary-nav{
+    min-width: 25%;
+    background-color: aquamarine;
+}
+
+.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    border-bottom: 1px solid grey;
+}
+
+.menu span{
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.menu a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu a:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+footer{
+    background-color: coral;
+    min-height: 100px;
+    display: flex;
+}
+
+@media screen  and (max-width:1024px){
+    .grid-item{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:762px){
+    .wrapper{
+        flex-direction: column;
+    }
+    
+    .secondary-nav{
+        order: 1;
+    }
+
+    .grid-container{
+        flex-direction: column;
+        order: 2;
+    }
+
+    .grid-item{
+        width: 95%;
+    }
 }
