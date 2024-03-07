@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width. initial-scale=1">
+        <title>event listeners and delegation</title>
+        <style type ="text/css">
+            img{
+                display: block;
+                width: 70%;
+            }
+            .hidden{
+                display: none;
+            }
+            .active{
+                color: red;
+            }
+        </style>
+        <script type = "text/javascript">
+            var hideshow
+            document.addEventListener('DOMContentLoaded', function(){
+                console.log('locked and loaded')
+
+                hideshow =
+                document.getElementById('hidebutton').addEventListener('click', toggleVisible)
+
+                document.getElementById('eventH1').addEventListener('mouseover',function(event){
+                    console.log(event.target)
+                    var el=event.target
+                    el.classList.toggle('active')
+                })
+            })
+
+            function toggleVisible(){
+                var peep = document.getElementById('brownie')
+                peep.classList.toggle('hidden')
+                if(peep.classList.contains('hidden')){
+                    hideshow.innerHTML = 'Show'
+                } else {
+                    document.getElementById('hidebutton').innerHTML = 'Hide'
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="eventH1">this is here to be moused over so we can see the event object</h1>
+        <button id="hidebutton">hide</button>
+        <img id="brownie" src="./IMG_3159.JPG">
+    </body>
+</html>
