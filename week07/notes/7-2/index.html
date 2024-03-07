@@ -18,7 +18,7 @@
     </head>
     <body>
         <button onclick="addSingleP()">Add a single paragraph using strings</button>
-        <button onclick="addMultiP()">Add mutiple ps the right way using DOM node</button>
+        <button onclick="addMultiP(9)">Add mutiple ps the right way using DOM node</button>
         <div id="content">
             <p>dummy text that will be over written by inner HTML</p>
         </div>
@@ -33,7 +33,21 @@
             function addSingleP(){
                 content.innerHTML = '<p>This is a poorly instantialed p tag using string trickery!</p>'
             }
-
-        </script>
+            // proper dynamic DOM
+                function addMultiP(num){
+                    // loop
+                    for (var i=0; i<num; i++){
+                    // create p element node
+                    var p = document.createElement('P')
+                    // create text node to go inside our p node
+                    var text = document.createTextNode(
+                        'this is paragraph number '+ (i+1) + 'created with nodes.')
+                    // append the text to the p
+                    p.appendChild(text)
+                    // append the p to content div
+                    content.appendChild(p)
+                    }
+                }        
+                </script>
     </body>
 </html>
