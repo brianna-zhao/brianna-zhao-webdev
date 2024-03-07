@@ -3,9 +3,37 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width. initial-scale=1">
-        <title>HTML boilerplate</title>
+        <title>dynamic DOM 2 ways</title>
+        <style type="text/css">
+            #content{
+                color: red;
+            }
+
+            @media screen and (max-width:767px) {
+                #content{
+                    color: blue;
+                }
+            }
+        </style>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <button onclick="addSingleP()">Add a single paragraph using strings</button>
+        <button onclick="addMultiP()">Add mutiple ps the right way using DOM node</button>
+        <div id="content">
+            <p>dummy text that will be over written by inner HTML</p>
+        </div>
+
+
+        <script type="text/javascript">
+// declare our content varabile globally
+            var content;
+// this will work globally bc script tag is after the body's contents
+            content = document.getElementById('content')
+            console.log(content.innerHTML)
+            function addSingleP(){
+                content.innerHTML = '<p>This is a poorly instantialed p tag using string trickery!</p>'
+            }
+
+        </script>
     </body>
 </html>
