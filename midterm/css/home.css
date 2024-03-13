@@ -1,7 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rubik+Gemstones&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    border-radius: 20px;
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
-;}
+}
+h1{
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+}
+header ul{
+    background-color: aliceblue;
+    margin:15px;
+    display: inline;
+    text-align: center;
+    position: relative;
+    right:0;
+    top:10%;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 7px 15px 7px;
+    background-color: lightpink;
+    box-shadow: 0,0,0.5px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: all 0.9s;
+}
+header ul li:hover{
+    background-color: #555;
+    color: #fff;
+}
+header ul li ul{
+    padding: 5px;
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    width: 150px;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.9s;
+}
+
+header ul li ul li{
+    margin: 5px;
+    padding: 10px;
+    background: #555;
+    display: block;
+    color: #fff;
+    text-shadow: 0 -1px 0 #000;
+}
+
+header ul li ul li:hover{
+    background: lightpink;
+}
+
+header ul li:hover ul{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
