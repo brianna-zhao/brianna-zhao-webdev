@@ -20,14 +20,14 @@ body {
 }
 
 header {
-  padding: 0 10%;
-  overflow-y: hidden;
-  position: fixed;
+  /* padding: 0 10%; */
+  /* overflow-y: hidden; */
+  /* position: fixed; */
   top: 0;
   left: 0;
   margin-bottom: 10px;
   z-index: 10;
-  background-color: grey;
+  /* background-color: grey; */
   display: block;
   flex-direction: row;
   justify-content: space-between;
@@ -117,4 +117,72 @@ ul li:hover ul{
 }
 #sparkle:hover{
     background-color: rgba(49, 2, 85, 0.813);
+}
+
+.container{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.thumb{
+    flex: 0 0 23%;
+    margin: 2rem auto;
+
+}
+.thumb p{
+    background-color: lightblue;
+    color: darkblue;
+    font-weight: bold;
+    width:286px;
+    text-shadow: -1px -1px #ffe66a;
+    padding:2px 4px;
+}
+
+h1  {
+    font-family: fantasy;
+    display:inline-block;
+    text-align: center;
+    background-color: lightpink;
+    font-weight: bolder;
+    width: 20%;
+    position: relative;
+    left: 40%;
+    top: 10px;
+}
+/* tablet sized screen */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+ 
+    .thumb{
+        flex: 0 0 45%;
+        margin: 1rem auto;
+    }
+}
+
+/* mobile phone sized screen */
+@media screen and (max-width: 768px) {
+
+    header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        text-align: center;
+        padding: 0;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    .thumb{
+
+        flex: 1 1 100%;
+        margin:1rem auto;        
+    }
+
+    h1{
+        opacity: 0;
+    }
 }
