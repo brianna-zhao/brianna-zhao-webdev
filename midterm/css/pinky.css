@@ -33,7 +33,7 @@ header {
   align-items: center;
 }
 
-body header  .logo{
+header  .logo{
     position: fixed;
     top: 20px;
     left: 20px;
@@ -120,13 +120,24 @@ ul li:hover ul{
 h1{
     font-family: fantasy;
     font-weight: bolder;
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    left: 25%;
     text-shadow: rgb(249, 38, 143);
+    background-color: lightpink;
+    text-align: center;
 }
 body img{
     position: relative;
     align-content: center;
     width: 80%;
     left: 10%;
+}
+body img:hover{
+    scale: 50%;
+    transition: 1s;
+    cursor: pointer;
 }
 body div p{
     background-color: rgba(245, 245, 220, 0.807);
