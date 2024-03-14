@@ -26,7 +26,7 @@ header {
   top: 0;
   left: 0;
   margin-bottom: 10px;
-  z-index: 10;
+  z-index: 1000;
   /* background-color: grey; */
   display: block;
   flex-direction: row;
@@ -52,6 +52,7 @@ ul{
     right: 5px;
     top: 10px;
     background-color: rgba(245, 245, 220, 0.843);
+    z-index: 10000;
 }
     
 ul li{
@@ -83,6 +84,7 @@ ul li ul{
 ul li ul li{
     background: #ffe66ad5;
     display: block;
+    z-index: 1000;
     color: hotpink;
     font-weight: bold;
 }
@@ -96,6 +98,7 @@ ul li:hover ul{
     display: block;
     opacity: 1;
     visibility: visible;
+    z-index: 10000;
 }
 .unorder{
     position: absolute;
@@ -131,6 +134,7 @@ h1{
     text-align: center;
     margin-top: 100px;
 }
+
 body img.scaledown{
     position: relative;
     align-content: center;
@@ -142,6 +146,7 @@ body img:hover{
     scale: 50%;
     transition: 1s;
     cursor: pointer;
+
 }
 body div p{
     background-color: rgba(245, 245, 220, 0.807);
