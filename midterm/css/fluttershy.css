@@ -126,7 +126,8 @@ h1{
     width: 50%;
     left: 25%;
     text-shadow: rgb(249, 38, 143);
-    background-color: lightpink;
+    background-color: lightyellow;
+    color: lightpink;
     text-align: center;
     margin-top: 100px;
 }
@@ -139,12 +140,14 @@ body img.scaledown{
 }
 body img:hover{
     scale: 50%;
+    transform: rotateY(180deg);
     transition: 1s;
     cursor: pointer;
 }
 body div p{
-    background-color: rgba(245, 245, 220, 0.807);
+    background-color: rgb(245, 245, 220);
     padding: 20px;
+    color: lightpink;
     width: 90%;
     position: relative;
     left:5%;
