@@ -12,9 +12,9 @@
 }
 
 html {
-  background: url('../img/background.jpeg') no-repeat center center fixed;
+  background: url('../img/rarhome.png') no-repeat center center fixed;
   background-size: cover;  
-}
+}xs
 body {
   font-family: 'Kaushan Script', cursive;
 }
