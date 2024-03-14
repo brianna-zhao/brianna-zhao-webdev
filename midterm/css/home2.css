@@ -119,6 +119,12 @@ ul li:hover ul{
     background-color: rgba(49, 2, 85, 0.813);
 }
 
+footer{
+    font-weight: bolder;
+    padding: 10px;
+    position: fixed;
+    bottom: 0%;
+}
 
 .container {
     /* width: 30%; */

@@ -12,7 +12,7 @@
 }
 
 html {
-  background: url('../img/background.jpeg') no-repeat center center fixed;
+  background: url('../img/pinkhome.jpeg') no-repeat center center fixed;
   background-size: cover;  
 }
 body {
@@ -27,7 +27,6 @@ header {
   left: 0;
   margin-bottom: 10px;
   z-index: 10;
-  background-color: grey;
   display: block;
   flex-direction: row;
   justify-content: space-between;
@@ -117,4 +116,25 @@ ul li:hover ul{
 }
 #sparkle:hover{
     background-color: rgba(49, 2, 85, 0.813);
+}
+h1{
+    font-family: fantasy;
+    font-weight: bolder;
+    text-shadow: rgb(249, 38, 143);
+}
+body img{
+    position: relative;
+    align-content: center;
+    width: 80%;
+    left: 10%;
+}
+body div p{
+    background-color: rgba(245, 245, 220, 0.807);
+    padding: 20px;
+    width: 90%;
+    position: relative;
+    left:5%;
+    font-weight: bold;
+    font-size: large;
+
 }
