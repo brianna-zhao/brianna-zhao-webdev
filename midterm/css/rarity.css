@@ -14,7 +14,7 @@
 html {
   background: url('../img/rarhome.png') no-repeat center center fixed;
   background-size: cover;  
-}xs
+}
 body {
   font-family: 'Kaushan Script', cursive;
 }
@@ -34,7 +34,7 @@ header {
   align-items: center;
 }
 
-body header  .logo{
+ header  #logo{
     position: fixed;
     top: 20px;
     left: 20px;
@@ -118,7 +118,42 @@ ul li:hover ul{
 #sparkle:hover{
     background-color: rgba(49, 2, 85, 0.813);
 }
+h1{
+    font-family: fantasy;
+    font-weight: bolder;
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    left: 25%;
+    text-shadow: rgb(249, 38, 143);
+    background-color: rgb(62, 25, 126);
+    color: #d26aff;
+    text-align: center;
+    margin-top: 100px;
+}
+body img.scaledown{
+    position: relative;
+    align-content: center;
+    width: 70%;
+    left: 15%;
+    top: 120px;
+}
+body img:hover{
+    scale: 50%;
+    transition: 1s;
+    cursor: pointer;
+}
+body div p{
+    background-color: rgba(245, 245, 220, 0.807);
+    color: #d26aff;
+    padding: 20px;
+    width: 90%;
+    position: relative;
+    left:5%;
+    font-weight: bold;
+    font-size: large;
 
+}
 
 @media screen and (max-width: 768px) {
 
