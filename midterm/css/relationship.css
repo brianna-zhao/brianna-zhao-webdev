@@ -162,7 +162,6 @@ h1  {
     }
 }
 
-/* mobile phone sized screen */
 @media screen and (max-width: 768px) {
 
     header{
@@ -184,5 +183,10 @@ h1  {
 
     h1{
         opacity: 0;
+    }
+    ul{
+        position: absolute;
+        top: 100px;
+        left: 0;
     }
 }
