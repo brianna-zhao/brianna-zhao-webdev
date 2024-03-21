@@ -126,7 +126,7 @@ h1{
     width: 50%;
     left: 25%;
     text-shadow: rgb(249, 38, 143);
-    background-color: lightblue;
+    background-color: lightskyblue;
     color: red;
     text-align: center;
     margin-top: 100px;
@@ -145,7 +145,8 @@ body img:hover{
     cursor: pointer;
 }
 body div p{
-    background-color: rgba(245, 245, 220, 0.807);
+    background-color: lightskyblue;
+    color:red;
     padding: 20px;
     width: 90%;
     position: relative;
