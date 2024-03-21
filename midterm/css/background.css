@@ -20,21 +20,20 @@ body {
 }
 
 header {
-  padding: 0 10%;
+  /* padding: 0 10%;
   overflow-y: hidden;
-  position: fixed;
+  position: fixed; */
   top: 0;
   left: 0;
   margin-bottom: 10px;
   z-index: 10;
-  background-color: grey;
   display: block;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-body header  .logo{
+header  .logo{
     position: fixed;
     top: 20px;
     left: 20px;
@@ -51,6 +50,7 @@ ul{
     position: fixed;
     right: 5px;
     top: 10px;
+    z-index: 1000;
     background-color: rgba(245, 245, 220, 0.843);
 }
     
@@ -118,5 +118,57 @@ ul li:hover ul{
 #sparkle:hover{
     background-color: rgba(49, 2, 85, 0.813);
 }
+h1{
+    font-family: fantasy;
+    font-weight: bolder;
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    left: 25%;
+    text-shadow: rgb(249, 38, 143);
+    background-color: lightpink;
+    text-align: center;
+    margin-top: 100px;
+}
+body img.scaledown{
+    position: relative;
+    align-content: center;
+    width: 70%;
+    left: 15%;
+    top: 120px;
+}
+body img:hover{
+    scale: 50%;
+    transition: 1s;
+    cursor: pointer;
+}
+body div p{
+    background-color: rgba(245, 245, 220, 0.807);
+    padding: 20px;
+    width: 90%;
+    position: relative;
+    left:5%;
+    font-weight: bold;
+    font-size: large;
 
+}
+
+
+@media screen and (max-width: 768px) {
+
+    header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        text-align: center;
+        padding: 0;
+    }
+    
+    ul{
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: 1000;
+    }
+}
 
