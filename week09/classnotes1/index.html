@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width. initial-scale=1">
+        <title>HTML boilerplate</title>
+        <script type="text/javascript">
+            let student = ['brianna', 'joseph', 'kimi', 'mike', 'brownie', 'tiffiany', 'christy']
+
+            function listStudent(){
+                let content = document.getElementById('content')
+                let ol = document.createElement('OL')
+                console.log(content)
+                content.appendChild(ol)
+                console.log(content)
+
+
+                for (var i=0;i<student.length; i++){
+                    let li = document.createElement('LI')
+                    let stu = student[i]
+                    var text = document.createTextNode(stu)
+                    li.appendChild(text)
+                    ol.appendChild(li)
+                }
+            }
+
+
+            function sortStudent(){
+                student.sort()
+                console.log(student)
+            }
+
+            function shuffleStudent(){
+                for(var i = 0; i<student.length; i++){
+                    let randomIndex = Math.floor(Math.random()*(i+1))
+                    let itemAtIndex = student[randomIndex]
+                    student[randomIndex] = student[i]
+                    student[i]=itemAtIndex
+                    console.log(student)
+
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="listStudent()">lIST STUDENT</button>
+        <button onclick="sortStudent()">Sort student</button>
+        <button onclick="shuffleStudent()">shuffle student</button>
+        <div id="content"></div>
+    </body>
+</html>
