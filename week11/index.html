@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width. initial-scale=1">
+        <title>geolocation</title>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', ()=>{
+                getLocation()
+            })
+
+            const getLocation = () =>{
+                if (navigator.geolocation && navigator.geolocation.getCurrentPosition){
+                    navigator.geolocation.getCurrentPosition(setPosition)
+
+                }else{
+                    alert('your browser do not supprt geolocation')
+
+                }
+            }
+            const setPosition =(position)=>{
+                console.log(position.coords.latitude)
+                console.log(position.coords.longtitude)
+
+                const lat = position.coords.latitude
+                const lon = position.coords.longtitude
+                const 
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="location"><p>currrently seraching for location</p></div>
+    </body>
+</html>
