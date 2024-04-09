@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width. initial-scale=1">
+        <title></title>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+             const images = [
+            'path/to/your/image1.jpg',
+            'path/to/your/image2.jpg',
+            'path/to/your/image3.jpg',
+    ];
+
+    document.getElementById('changeImage').addEventListener('click', function() {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        document.getElementById('randomImage').src = images[randomIndex];
+    });
+});
+        </script>
+        <style>
+            img{
+                width: 70%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Brownie Joseph-JR Zhao</h1>
+        <button id="changeImage">click me a view a random photo of Brownie!!!</button>
+        <img id="randomImage" src="1.JPG" alt="Image of Brownie">
+    </body>
+</html>
