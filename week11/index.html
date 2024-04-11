@@ -23,13 +23,35 @@
                 console.log(position.coords.longtitude)
 
                 const lat = position.coords.latitude
-                const lon = position.coords.longtitude
-                const 
-            }
+                const lon = position.coords.longitude
 
-        </script>
-    </head>
-    <body>
-        <div id="location"><p>currrently seraching for location</p></div>
-    </body>
+        loc.innerHTML = `<p>Latitude: ${lat} <br/> Longitude: ${lon}</p>`
+      }
+
+      const showError = (error) => {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            loc.innerHTML = 'User denied the request for geolocation'
+            break
+          case error.POSITION_UNAVAILABLE:
+            loc.innerHTML = 'Location info is unavailable'
+            break
+          case error.TIMEOUT:
+            loc.innerHTML = 'The location request timed out'
+            break
+          case error.UNKNOWN_ERROR:
+            loc.innerHTML = 'An unknown error occured'
+            break
+          default:
+            loc.innerHTML = 'An unknown error occured'
+            break
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="location">
+      <p>Currently searching for location...</p>
+    </div>
+  </body>
 </html>
