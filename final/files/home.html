@@ -11,31 +11,77 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
     />
-    <!-- <link rel="stylesheet" href="./css/home.css" /> -->
+    <link rel="individual style" href="../css/individual.css">
 
     <title>My Little Pony</title>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
+        html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          overflow-x: hidden;
+          background: url('../img copy/background.jpeg') no-repeat center center fixed;
+          display: flex;
+          flex-direction: column;
+          justify-content: center; 
+          -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        font-family: fantasy;
+        font-size: x-large;        }
+        .carousel-inner img {
+          width: 100%;
+          max-height: 90%;
+        }
         .homenavbar {
-            font-family:fantasy;
-            font-size: x-large;
-            background-color: transparent;
-            position: fixed;
-            z-index: 1000;
+          font-family: fantasy;
+          font-size: x-large;
+          background-color: transparent;
+          position: fixed;
+          width: 100%;
+          top: 0; 
+          z-index: 1050; 
         }
         .homenavbar ul{
-            background-color: #ffe66a;
+            background-color: rgba(245, 245, 220, 0.843);
             border-radius: 10px;
             position: fixed;
             top: 30px;
             right: 10px;
         }
-        .carousel-inner img{
-            width: 100%;
-            height: 90%;
+        .homenavbar ul li:hover{
+            background-color: #ffe66a;
+            border-radius: 10px;
+
         }
-    </style>
+        .dropdown-menu .dropdown-item:hover {
+        background-color: #ffe66a; 
+        color: hotpink;
+    }
+        #apple:hover{
+        background-color: rgba(252, 101, 1, 0.658);
+}
+        #fluttershy:hover{
+    background-color: rgba(255, 182, 193, 0.897);
+}
+        #pinky:hover{
+    background-color: rgba(244, 40, 142, 0.851);
+}
+        #rarity:hover{
+    background-color: rgba(238, 130, 238, 0.947);
+}
+        #sparkle:hover{
+    background-color: rgba(49, 2, 85, 0.813);
+}  
+        #rainbow:hover{
+            background-color: lightblue;
+        }
+        
+      </style>
+      
   </head>
   <body class="p-0 m-0 border-0">
     <!-- BOOTSTRAP NAVBAR -->
@@ -71,10 +117,10 @@
                   >MAIN</a
                 >
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="#">HOME</a></li>
-                  <li><a class="dropdown-item" href="#">RELATINSHIPS</a></li>
-                  <li><a class="dropdown-item" href="#">WHAT PONY R U</a></li>
-                  <li><a class="dropdown-item" href="#">BACKGROUND</a></li>
+                  <li><a class="dropdown-item" href="./home.html">HOME</a></li>
+                  <li><a class="dropdown-item" href="relationship.html">RELATINSHIPS</a></li>
+                  <li><a class="dropdown-item" href="./form.html">WHAT PONY R U</a></li>
+                  <li><a class="dropdown-item" href="background.html">BACKGROUND</a></li>
                 </ul>
               </li>
             <!-- BEGIN DROPDOWN MENU ITEM -->
@@ -88,12 +134,12 @@
                 >CHARACTERS</a
               >
               <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">APPLEJACK</a></li>
-                <li><a class="dropdown-item" href="#">FLUTTERSHY</a></li>
-                <li><a class="dropdown-item" href="#">PINKY PIE</a></li>
-                <li><a class="dropdown-item" href="#">RAINBOW DASH</a></li>
-                <li><a class="dropdown-item" href="#">RARITY</a></li>
-                <li><a class="dropdown-item" href="#">TWILIGHT SPARKLE</a></li>
+                <li><a class="dropdown-item" id="apple"href="apple.html">APPLEJACK</a></li>
+                <li><a class="dropdown-item" id="fluttershy" href="fluttershy.html">FLUTTERSHY</a></li>
+                <li><a class="dropdown-item" id="pinky" href="pinkypie.html">PINKY PIE</a></li>
+                <li><a class="dropdown-item" id="rainbow" href="rainbow.html">RAINBOW DASH</a></li>
+                <li><a class="dropdown-item" id="rarity"href="rarity.html">RARITY</a></li>
+                <li><a class="dropdown-item" id="sparkle"href="twilightsparkle.html">TWILIGHT SPARKLE</a></li>
               </ul>
             </li>
             <!-- END DROPDOWN MENU ITEM -->
@@ -102,134 +148,108 @@
       </div>
     </div>
     <!-- END BOOTSTRAP NAVBAR -->
-    <!-- BEGIN CAROUSEL -->
-    <div
-      id="piccarousel"
-      class="carousel slide carousel-fade"
-      data-bs-ride="carousel"
-    >
-      <!-- Indicators -->
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#piccarousel"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        >
-          <i class="bi-alarm"></i>
-        </button>
-        <button
-          type="button"
-          data-bs-target="#piccarousel"
-          data-bs-slide-to="1"
-          aria-current="false"
-          aria-label="Slide 2"
-        >
-          <i class="bi-alarm"></i>
-        </button>
-        <button
-          type="button"
-          data-bs-target="#piccarousel"
-          data-bs-slide-to="2"
-          aria-current="false"
-          aria-label="Slide 3"
-        >
-          <i class="bi-alarm"></i>
-        </button>
-        <button
-          type="button"
-          data-bs-target="#piccarousel"
-          data-bs-slide-to="3"
-          aria-current="false"
-          aria-label="Slide 4"
-        >
-          <i class="bi-alarm"></i>
-        </button>
-      </div>
-      <!-- end indicators -->
-      <!-- BEGIN IMAGE SLIDES -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-            <a href="./apple.html">
-          <img
-            src="../img copy/applejackwide.png"
-            class="d-block w-100"
-            alt="applejack pic"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>APPLEJACK</h5>
-          </div>
-        </a>
-        </div>
+  <!-- BEGIN CAROUSEL -->
+<div id="piccarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#piccarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#piccarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#piccarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#piccarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#piccarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#piccarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      <button type="button" data-bs-target="#piccarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+      <button type="button" data-bs-target="#piccarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+      <button type="button" data-bs-target="#piccarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
 
-        <div class="carousel-inner">
-            <div class="carousel-item ">
-                <a href="./apple.html">
-              <img
-                src="../img copy/applejackwide.png"
-                class="d-block w-100"
-                alt="FLUTTERSHY pic"
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>FLUTTERSHY</h5>
-              </div>
-            </a>
-            </div>
 
-            <div class="carousel-inner">
-                <div class="carousel-item ">
-                    <a href="./apple.html">
-                  <img
-                    src="../img copy/applejackwide.png"
-                    class="d-block w-100"
-                    alt="RAINBOW DASH pic"
-                  />
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>RAINBOW DASH</h5>
-                  </div>
-                </a>
-                </div>
-
-                <div class="carousel-inner">
-                    <div class="carousel-item ">
-                        <a href="./apple.html">
-                      <img
-                        src="../img copy/raritywide.jpeg"
-                        class="d-block w-100"
-                        alt="RARITY pic"
-                      />
-                      <div class="carousel-caption d-none d-md-block">
-                        <h5>RARITY</h5>
-                      </div>
-                    </a>
-                    </div>
-
-      </div>
-      <!-- END IMAGE SLIDES -->
-      <!-- BEGIN PREV NEXT BUTTONS -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#piccarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#piccarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-      <!-- END PREV NEXT BUTTONS -->
     </div>
-    <!-- END CAROUSEL -->
+    <!-- Carousel Inner -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="./apple.html">
+        <img src="../img copy/applejackwide.png" class="d-block w-100" alt="applejack pic">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>APPLEJACK</h5>
+        </div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="./fluttershy.html">
+        <img src="../img copy/fluttershywide.png" class="d-block w-100" alt="FLUTTERSHY pic">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>FLUTTERSHY</h5>
+        </div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="./rainbow.html">
+        <img src="../img copy/rainbowwide.png" class="d-block w-100" alt="RAINBOW DASH pic">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>RAINBOW DASH</h5>
+        </div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="./rarity.html">
+        <img src="../img copy/raritywide.jpeg" class="d-block w-100" alt="RARITY pic">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>RARITY</h5>
+        </div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="./pinkypie.html">
+        <img src="../img copy/raritywide.jpeg" class="d-block w-100" alt="RARITY pic">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>PINKY PIE</h5>
+        </div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="./twilightsparkle.html">
+        <img src="../img copy/raritywide.jpeg" class="d-block w-100" alt="RARITY pic">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>TWILIGHT SPARKLE</h5>
+        </div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="./form.html">
+        <img src="../img copy/raritywide.jpeg" class="d-block w-100" alt="RARITY pic">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>WHAT PONY ARE YOU</h5>
+        </div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="./relationship.html">
+        <img src="../img copy/relationship.jpeg" class="d-block w-100" alt="RARITY pic">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>RELATIONSHIPS</h5>
+        </div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="./background.html">
+        <img src="../img copy/background.jpeg" class="d-block w-100" alt="RARITY pic">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>BACKGROUND</h5>
+        </div>
+        </a>
+      </div>
+    </div>
+    <!-- Navigation Buttons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#piccarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#piccarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- END CAROUSEL -->
+  
   </body>
 </html>
