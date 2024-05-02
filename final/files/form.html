@@ -15,7 +15,9 @@
 
     <title>My Little Pony</title>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
     <style>
         html, body {
         height: 100%; /* Ensures the html and body take full height of the viewport */
@@ -29,118 +31,177 @@
         background-size: cover;
         font-family: fantasy;
         font-size: x-large;
+        border-radius: 10px;
     }
-        .homenavbar {
-            font-family:fantasy;
-            font-size: x-large;
-            background-color: transparent;
-            position: fixed;
-            z-index: 1000;
+    .homenavbar {
+          font-family: fantasy;
+          font-size: x-large;
+          background-color: transparent;
+          position: fixed;
+          width: 100%;
+          top: 0; 
+          z-index: 1050; 
         }
         .homenavbar ul{
-            background-color: #ffe66a;
+            background-color: rgba(245, 245, 220, 0.843);
             border-radius: 10px;
             position: fixed;
             top: 30px;
             right: 10px;
         }
-        .container{
+        .homenavbar ul li:hover{
             background-color: #ffe66a;
+            border-radius: 10px;
+
         }
+        .dropdown-menu .dropdown-item:hover {
+        background-color: #ffe66a; 
+        color: hotpink;
+    }
+            #apple:hover{
+            background-color: rgba(252, 101, 1, 0.658);
+    }
+            #fluttershy:hover{
+        background-color: rgba(255, 182, 193, 0.897);
+    }
+            #pinky:hover{
+        background-color: rgba(244, 40, 142, 0.851);
+    }
+            #rarity:hover{
+        background-color: rgba(238, 130, 238, 0.947);
+    }
+            #sparkle:hover{
+        background-color: rgba(49, 2, 85, 0.813);
+    }  
+            #rainbow:hover{
+                background-color: lightblue;
+            }
+            #navbar-toggler{
+                background-color: rgba(245, 245, 220, 0.843);
+                color: rgba(245, 245, 220, 0.843);
+
+            }
+            
+            .container {
+            width: 60%;                 
+            background-color: #FFFACD; 
+            padding: 20px;              
+            margin: auto;               /* Center the container horizontally */
+            margin-top: 100px;          
+            border-radius: 10px;        
+            display: flex;              
+            justify-content: center;    
+            align-items: center;       
+        }
+
         .form-container {
-        width: 50%;                 
-        margin: 50px auto;   
-        font-family:fantasy;
-        padding: 20px;               
-        /* background-color: transparent;  */
-        border-radius: 10px;    
-        position: absolute;    
-        left: 25%;  
-        top: 50px;
+            width: 100%;                
+            padding: 20px;              
+            font-family: fantasy;       
+            border-radius: 10px;        
+        }
+        .btn-custom {
+            background-color: #FFB6C1; 
+            color: #FF1493;            
+            border: none;  
+            display: inline-block;           
+        }
+        .btn-custom:hover {
+            background-color: #FFC0CB; 
+        }
+        select.form-select option {
+            background-color: #ADD8E6; 
+        }
+        #result, #result1, #result2, #result3, #result4, #result5{
+            margin: 5px;
+            padding: 10px;
+            border-radius: 10px;
+            display: none; 
+            position: absolute;
+            width: 50%;
+            left: 25%;
+            background-color: aliceblue;
+        }
+        img.re{ 
+            width: 100%; 
+            height: auto;
+       }
+
+       .button-container {
+        display: flex;
+        justify-content: space-around; /* This will space the buttons evenly */
+        padding-top: 20px; /* Add space above the button row */
     }
-    .btn-custom {
-        background-color: #FFB6C1; /* Light pink background */
-        color: #FF1493;            /* Hot pink text color */
-        border: none;              /* Remove border */
-    }
-    .btn-custom:hover {
-        background-color: #FFC0CB; /* Slightly darker pink on hover */
-    }
-    select.form-select option {
-        background-color: #ADD8E6; /* Light blue background for options */
-    }
-    
+
     </style>
   </head>
-  <body class="p-0 m-0 border-0">
-    <!-- BOOTSTRAP NAVBAR -->
-    <div class="navbar navbar-expand-lg homenavbar" data-bs-theme="home">
-      <div class="container-fluid ">
-        <a href="./home.html" class="navbar-brand">
-            <img src="../img copy/logo.png">
-        </a>
-        <!-- This is our hidden(on larger screens) hamburger menu -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="#navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle Navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNavDropdown"
-        >
-          <ul class="navbar-nav align-self-end px-4">
-            <li class="nav-item dropdown">
-                <a
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  class="nav-link dropdown-toggle"
-                  >MAIN</a
-                >
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="./home.html">HOME</a></li>
-                    <li><a class="dropdown-item" href="#">RELATINSHIPS</a></li>
-                    <li><a class="dropdown-item" href="./form.html">WHAT PONY R U</a></li>
-                    <li><a class="dropdown-item" href="#">BACKGROUND</a></li>
-                </ul>
-              </li>
-            <!-- BEGIN DROPDOWN MENU ITEM -->
-            <li class="nav-item dropdown">
+    <header>
+  <div class="navbar navbar-expand-lg homenavbar" data-bs-theme="home">
+    <div class="container-fluid ">
+      <a href="./home.html" class="navbar-brand">
+          <img src="../img copy/logo.png">
+      </a>
+      <!-- This is our hidden(on larger screens) hamburger menu -->
+      <button
+      id="navbar-toggler"
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="#navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNavDropdown"
+      >
+        <ul class="navbar-nav align-self-end px-4">
+          <li class="nav-item dropdown">
               <a
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
                 class="nav-link dropdown-toggle"
-                >CHARACTERS</a
+                >MAIN</a
               >
               <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">APPLEJACK</a></li>
-                <li><a class="dropdown-item" href="#">FLUTTERSHY</a></li>
-                <li><a class="dropdown-item" href="#">PINKY PIE</a></li>
-                <li><a class="dropdown-item" href="#">RAINBOW DASH</a></li>
-                <li><a class="dropdown-item" href="#">RARITY</a></li>
-                <li><a class="dropdown-item" href="#">TWILIGHT SPARKLE</a></li>
+                <li><a class="dropdown-item" href="./home.html">HOME</a></li>
+                <li><a class="dropdown-item" href="relationship.html">RELATINSHIPS</a></li>
+                <li><a class="dropdown-item" href="./form.html">WHAT PONY R U</a></li>
+                <li><a class="dropdown-item" href="background.html">BACKGROUND</a></li>
               </ul>
             </li>
-            <!-- END DROPDOWN MENU ITEM -->
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!-- END BOOTSTRAP NAVBAR -->
-          <div class="container rounded-10">
+          <!-- BEGIN DROPDOWN MENU ITEM -->
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              class="nav-link dropdown-toggle"
+              >CHARACTERS</a
+            >
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" id="apple"href="apple.html">APPLEJACK</a></li>
+              <li><a class="dropdown-item" id="fluttershy" href="fluttershy.html">FLUTTERSHY</a></li>
+              <li><a class="dropdown-item" id="pinky" href="pinkypie.html">PINKY PIE</a></li>
+              <li><a class="dropdown-item" id="rainbow" href="rainbow.html">RAINBOW DASH</a></li>
+              <li><a class="dropdown-item" id="rarity"href="rarity.html">RARITY</a></li>
+              <li><a class="dropdown-item" id="sparkle"href="twilightsparkle.html">TWILIGHT SPARKLE</a></li>
+            </ul>
+          </li>
+        </header>
+
+  <body class="p-0 m-0 border-0">
+    
+<div class="container rounded-10">
     <div class="form-container">
         <h2>Please fill out the form</h2>
-        <form>
+        <form id="myForm">
             <!-- Name input -->
             <div class="mb-3">
                 <label for="nameInput" class="form-label">Name</label>
@@ -183,11 +244,89 @@
                 </div>
             </div>
 
-            <!-- Submit button -->
-            <button type="submit" class="btn btn-custom">Submit</button>
+            <div class="button-container">
+                <button type="submit" class="btn btn-custom">Submit</button>
+                <button type="button" class="btn btn-custom" id="tryAgain">TRY AGAIN</button>
+            </div>
+            
+
         </form>
     </div>
 </div>
+
+<div id="resultContainer" style="display:none;">
+
+    <div id="result">
+        <h2>YOUR MY LITTLE PONY CHARACTER IS</h2>
+        <p>PINKY PIE</p>
+        <img src="../img copy/pinkypie.jpeg" class="re">
+    </div>
+    <div id="result1">
+        <h2>YOUR MY LITTLE PONY CHARACTER IS </h2>
+        <p>APPLEJACK</p>
+        <img src="../img copy/applejack.jpeg"class="re">
+    </div>
+    <div id="result2">
+        <h2>YOUR MY LITTLE PONY CHARACTER IS </h2>
+        <p>RARITY</p>
+        <img src="../img copy/rarity.jpeg" class="re">
+    </div>
+    <div id="result3">
+        <h2>YOUR MY LITTLE PONY CHARACTER IS </h2>
+        <p>TWILIGHT SPARKLE</p>
+        <img src="../img copy/sparkle.jpg" class="re">
+    </div>
+    <div id="result4">
+        <h2>YOUR MY LITTLE PONY CHARACTER IS </h2>
+        <p>FLUTTERSHY</p>
+        <img src="../img copy/fluttershy.jpeg" class="re">
+    </div>
+    <div id="result5">
+        <h2>YOUR MY LITTLE PONY CHARACTER IS </h2>
+        <p>RAINBOW DASH</p>
+        <img src="../img copy/rainbow.jpg" class="re">
+    </div>
+
+</div>
+
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById('myForm');
+    var tryAgainButton = document.getElementById('tryAgain');
+    var resultContainer = document.getElementById('resultContainer');
+    var results = document.querySelectorAll('[id^="result"]'); // Selects all divs with ids starting with 'result'
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var month = document.getElementById('monthSelect').value;
+
+        results.forEach(function(result) {
+            result.style.display = 'none';
+        });
+        resultContainer.style.display = 'block';
+        if (month === "January" || month === "February") {
+            document.getElementById('result').style.display = 'block';
+        } else if (month === "March" || month === "April") {
+            document.getElementById('result1').style.display = 'block';
+        } else if (month === "May" || month === "June") {
+            document.getElementById('result2').style.display = 'block';
+        } else if (month === "July" || month === "August") {
+            document.getElementById('result3').style.display = 'block';
+        } else if (month === "September" || month === "October") {
+            document.getElementById('result4').style.display = 'block';
+        } else if (month === "November" || month === "December") {
+            document.getElementById('result5').style.display = 'block';
+        }
+    });
+
+    tryAgainButton.addEventListener('click', function() {
+        resultContainer.style.display = 'none';
+        form.reset();
+    });
+});
+
+    </script>
+    
 
   </body>
 </html>
