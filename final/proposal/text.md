@@ -11,3 +11,6 @@ changes and stuff：
         6. costumize bootstrap css tp make it fit in my theme*
         7. if has tome change relationship page and add some interactive funtion to that page-javascript
     3. since im planning on using bootstrap i might just abandon my old css page, the positionsing isn't wokingthat well so redo the css for the erbsite*
+
+
+
