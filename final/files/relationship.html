@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <title>PINKY PIE</title>
+    <title> RELATIONSHIPS</title>
     <style>
         html, body {
             height: 100%;
@@ -24,7 +24,7 @@
         .homenavbar {
             font-family: fantasy;
             font-size: x-large;
-            background-color: transparent;
+        background-color: transparent;
             position: fixed;
             width: 100%;
             top: 0; 
@@ -69,25 +69,25 @@
 
             }
         .container {
-            padding-top: 100px; /* Adjust top padding to not overlap navbar */
+            padding-top: 100px; 
         }
         .grid-item {
             background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            cursor: pointer; /* Indicates clickable items */
+            cursor: pointer; 
         }
         .grid-item img {
             width: 100%; 
             height: auto;
             border-radius: 10px;
         }
-        /* Modal styling */
+      
         .modal-content {
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 10px;
-        }
+    background-color: #ffb6c1bc; 
+    border-radius: 10px;
+}
     </style>
 </head>
 <body>
@@ -135,68 +135,183 @@
                 <h5>Brownie Joseph-Jr Zhao</h5>
                 <p>This is Brianna's emotional support.</p>
             </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 grid-item">
-                    <img src="../img copy/spike.png" alt="Dynamic Image">
-                    <h5>SPIKE</h5>
-                    <p>This is TWILIGHT SPARKLE'S pet.</p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 grid-item">
-                    <img src="../img copy/flutterbro.jpeg" alt="Dynamic Image">
-                    <h5>Zephyr Breeze</h5>
-                    <p>This is FLUTTERSHY'S brother</p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 grid-item">
-                    <img src="../img copy/pinksis.png" alt="Dynamic Image">
-                    <h5>CMaud pie</h5>
-                    <p>This is PINKY PIE'S sister.</p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 grid-item">
-                    <img src="../img copy/rainsis.png" alt="Dynamic Image">
-                    <h5>Scootaloo</h5>
-                    <p>This is RAINBOW DASH'S sister.</p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 grid-item">
-                    <img src="../img copy/applesis.png" alt="Dynamic Image">
-                    <h5>Apple Bloom</h5>
-                    <p>This is APPLEJACK'S sister.</p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 grid-item">
-                    <img src="../img copy/raritysis.png" alt="Dynamic Image">
-                    <h5>Sweetie Bella</h5>
-                    <p>This is RARITY'S sister</p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 grid-item">
-                    <img src="../img copy/sparklebro.png" alt="Dynamic Image">
-                    <h5>Shining Armor</h5>
-                    <p>This is TWILIGHT SPARKLE'S brother</p>
-                </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 grid-item" id="spike">
+                <img src="../img copy/spike.png" alt="Dynamic Image">
+                <h5>SPIKE</h5>
+                <p>This is TWILIGHT SPARKLE'S pet.</p>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 grid-item" id="zephyr">
+                <img src="../img copy/flutterbro.jpeg" alt="Dynamic Image">
+                <h5>Zephyr Breeze</h5>
+                <p>This is FLUTTERSHY'S brother.</p>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 grid-item" id="maud">
+                <img src="../img copy/pinksis.png" alt="Dynamic Image">
+                <h5>Maud Pie</h5>
+                <p>This is PINKY PIE'S sister.</p>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 grid-item" id="scootaloo">
+                <img src="../img copy/rainsis.png" alt="Dynamic Image">
+                <h5>Scootaloo</h5>
+                <p>This is RAINBOW DASH'S sister.</p>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 grid-item" id="appleBloom">
+                <img src="../img copy/applesis.png" alt="Dynamic Image">
+                <h5>Apple Bloom</h5>
+                <p>This is APPLEJACK'S sister.</p>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 grid-item" id="sweetieBelle">
+                <img src="../img copy/raritysis.png" alt="Dynamic Image">
+                <h5>Sweetie Belle</h5>
+                <p>This is RARITY'S sister.</p>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 grid-item" id="shiningArmor">
+                <img src="../img copy/sparklebro.png" alt="Dynamic Image">
+                <h5>Shining Armor</h5>
+                <p>This is TWILIGHT SPARKLE'S brother.</p>
+            </div>
+            
         </div>
     </div>
 
-    <!-- popip -->
-    <div class="modal fade" id="brownieModal" tabindex="-1" aria-labelledby="brownieModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="brownieModalLabel">Joseph Dai and Brownie Joseph-Jr Zhao</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="../img copy/support.JPG" alt="Brownie" style="width:100%;">
-                    <p>credit to Joseph and Brownie for being my emotional support throughout final week.</p>
-                    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/dog-bark/385025057?i=385025171"></iframe>
-                </div>
+    <!-- popup for Brownie -->
+<div class="modal fade" id="brownieModal" tabindex="-1" aria-labelledby="brownieModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="brownieModalLabel">Joseph Dai and Brownie Joseph-Jr Zhao</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="../img copy/support.JPG" alt="Brownie" style="width:100%;">
+                <p>credit to Joseph and Brownie for being my emotional support throughout final week.</p>
             </div>
         </div>
     </div>
+</div>
+
+<!-- popup for Spike -->
+<div class="modal fade" id="spikeModal" tabindex="-1" aria-labelledby="spikeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="spikeModalLabel">Spike the Dragon</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="../img copy/spike.png" alt="Spike" style="width:100%;">
+                <p>Spike is Twilight Sparkle's loyal pet.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal for Zephyr Breeze -->
+<div class="modal fade" id="zephyrModal" tabindex="-1" aria-labelledby="zephyrModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="zephyrModalLabel">Zephyr Breeze</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="../img copy/flutterbro.jpeg" alt="Zephyr Breeze" style="width:100%;">
+                <p>Zephyr Breeze is Fluttershy's brother, known for his somewhat lazy and flamboyant attitude.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Maud Pie -->
+<div class="modal fade" id="maudModal" tabindex="-1" aria-labelledby="maudModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="maudModalLabel">Maud Pie</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="../img copy/pinksis.png" alt="Maud Pie" style="width:100%;">
+                <p>Maud Pie is Pinky Pie's sister, known for her extremely stoic demeanor and love of rocks.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Scootaloo -->
+<div class="modal fade" id="scootalooModal" tabindex="-1" aria-labelledby="scootalooModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="scootalooModalLabel">Scootaloo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="../img copy/rainsis.png" alt="Scootaloo" style="width:100%;">
+                <p>Scootaloo is often considered to be Rainbow Dash's sister due to their close bond, even though they are not related by blood.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Apple Bloom -->
+<div class="modal fade" id="appleBloomModal" tabindex="-1" aria-labelledby="appleBloomModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="appleBloomModalLabel">Apple Bloom</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="../img copy/applesis.png" alt="Apple Bloom" style="width:100%;">
+                <p>Apple Bloom is Applejack's younger sister, known for her energetic spirit and determination to prove herself.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Sweetie Belle -->
+<div class="modal fade" id="sweetieBelleModal" tabindex="-1" aria-labelledby="sweetieBelleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sweetieBelleModalLabel">Sweetie Belle</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal, aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="../img copy/raritysis.png" alt="Sweetie Belle" style="width:100%;">
+                <p>Sweetie Belle is Rarity's younger sister, known for her singing talent and sweet nature.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Shining Armor -->
+<div class="modal fade" id="shiningArmorModal" tabindex="-1" aria-labelledby="shiningArmorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="shiningArmorModalLabel">Shining Armor</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="../img copy/sparklebro.png" alt="Shining Armor" style="width:100%;">
+                <p>Shining Armor is Twilight Sparkle's older brother, known for his role as the captain of the Royal Guard and his protective nature.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <script>
-        document.getElementById('brownie').addEventListener('click', function() {
-            var myModal = new bootstrap.Modal(document.getElementById('brownieModal'), {
-                keyboard: false
-            });
-            myModal.show();
+        document.querySelectorAll('.grid-item').forEach(item => {
+    item.addEventListener('click', function() {
+        const modalId = this.id + 'Modal'; 
+        const modal = new bootstrap.Modal(document.getElementById(modalId), {
+            keyboard: false
         });
+        modal.show();
+    });
+});
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>

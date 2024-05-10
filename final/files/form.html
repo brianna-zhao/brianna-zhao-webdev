@@ -86,7 +86,7 @@
             width: 60%;                 
             background-color: #FFFACD; 
             padding: 20px;              
-            margin: auto;               /* Center the container horizontally */
+            margin: auto;               
             margin-top: 100px;          
             border-radius: 10px;        
             display: flex;              
@@ -129,8 +129,8 @@
 
        .button-container {
         display: flex;
-        justify-content: space-around; /* This will space the buttons evenly */
-        padding-top: 20px; /* Add space above the button row */
+        justify-content: space-around; 
+        padding-top: 20px; 
     }
 
     </style>
@@ -202,14 +202,14 @@
     <div class="form-container">
         <h2>Please fill out the form</h2>
         <form id="myForm">
-            <!-- Name input -->
+            <!-- Name -->
             <div class="mb-3">
                 <label for="nameInput" class="form-label">Name</label>
                 <input type="text" class="form-control" id="nameInput" name="name" required>
             </div>
 
             <div class="row">
-                <!-- Favorite color dropdown -->
+                <!-- Favocolor -->
                 <div class="col-md-6 mb-3">
                     <label for="colorSelect" class="form-label">What is your favorite color?</label>
                     <select class="form-select" id="colorSelect" name="favorite_color" required>
@@ -223,7 +223,7 @@
                     </select>
                 </div>
 
-                <!-- Birthday month dropdown -->
+                <!-- Birthday-->
                 <div class="col-md-6 mb-3">
                     <label for="monthSelect" class="form-label">What is your birthday month?</label>
                     <select class="form-select" id="monthSelect" name="birthday_month" required>
@@ -254,7 +254,22 @@
     </div>
 </div>
 
-<div id="resultContainer" style="display:none;">
+<!-- popupwindow -->
+<div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="resultModalLabel">Your My Little Pony Character Is</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div id="resultContainer" style="display:none;">
 
     <div id="result">
         <h2>YOUR MY LITTLE PONY CHARACTER IS</h2>
@@ -287,43 +302,103 @@
         <img src="../img copy/rainbow.jpg" class="re">
     </div>
 
-</div>
+</div> -->
 
 <script>
-   document.addEventListener("DOMContentLoaded", function() {
+//    document.addEventListener("DOMContentLoaded", function() {
+//     var form = document.getElementById('myForm');
+//     var tryAgainButton = document.getElementById('tryAgain');
+//     var resultContainer = document.getElementById('resultContainer');
+//     var results = document.querySelectorAll('[id^="result"]'); // Selects all divs with ids starting with 'result'
+
+//     form.addEventListener('submit', function(event) {
+//         event.preventDefault();
+//         var month = document.getElementById('monthSelect').value;
+
+//         results.forEach(function(result) {
+//             result.style.display = 'none';
+//         });
+//         resultContainer.style.display = 'block';
+//         if (month === "January" || month === "February") {
+//             document.getElementById('result').style.display = 'block';
+//         } else if (month === "March" || month === "April") {
+//             document.getElementById('result1').style.display = 'block';
+//         } else if (month === "May" || month === "June") {
+//             document.getElementById('result2').style.display = 'block';
+//         } else if (month === "July" || month === "August") {
+//             document.getElementById('result3').style.display = 'block';
+//         } else if (month === "September" || month === "October") {
+//             document.getElementById('result4').style.display = 'block';
+//         } else if (month === "November" || month === "December") {
+//             document.getElementById('result5').style.display = 'block';
+//         }
+//     });
+
+//     tryAgainButton.addEventListener('click', function() {
+//         resultContainer.style.display = 'none';
+//         form.reset();
+//     });
+// });
+
+const characterColors = {
+    "PINKY PIE": "#FFC0CB", // Light pink
+    "APPLEJACK": "#DEB887", // Burlywood
+    "RARITY": "#DDA0DD", // Plum
+    "TWILIGHT SPARKLE": "#9370DB", // Medium purple
+    "FLUTTERSHY": "#FADADD", // Pale pink
+    "RAINBOW DASH": "#1E90FF" // Dodger blue
+};
+
+document.addEventListener("DOMContentLoaded", function() {
     var form = document.getElementById('myForm');
     var tryAgainButton = document.getElementById('tryAgain');
-    var resultContainer = document.getElementById('resultContainer');
-    var results = document.querySelectorAll('[id^="result"]'); // Selects all divs with ids starting with 'result'
+    var modalBody = document.querySelector('#resultModal .modal-body');
+    var modalContent = document.querySelector('#resultModal .modal-content');
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         var month = document.getElementById('monthSelect').value;
 
-        results.forEach(function(result) {
-            result.style.display = 'none';
-        });
-        resultContainer.style.display = 'block';
+        modalBody.innerHTML = '';
+
+        var character = "";
+        var resultHtml = '';
+
         if (month === "January" || month === "February") {
-            document.getElementById('result').style.display = 'block';
+            character = "PINKY PIE";
+            resultHtml = '<p>PINKY PIE</p><img src="../img copy/pinkypie.jpeg" class="re">';
         } else if (month === "March" || month === "April") {
-            document.getElementById('result1').style.display = 'block';
+            character = "APPLEJACK";
+            resultHtml = '<p>APPLEJACK</p><img src="../img copy/applejack.jpeg" class="re">';
         } else if (month === "May" || month === "June") {
-            document.getElementById('result2').style.display = 'block';
+            character = "RARITY";
+            resultHtml = '<p>RARITY</p><img src="../img copy/rarity.jpeg" class="re">';
         } else if (month === "July" || month === "August") {
-            document.getElementById('result3').style.display = 'block';
+            character = "TWILIGHT SPARKLE";
+            resultHtml = '<p>TWILIGHT SPARKLE</p><img src="../img copy/sparkle.jpg" class="re">';
         } else if (month === "September" || month === "October") {
-            document.getElementById('result4').style.display = 'block';
+            character = "FLUTTERSHY";
+            resultHtml = '<p>FLUTTERSHY</p><img src="../img copy/fluttershy.jpeg" class="re">';
         } else if (month === "November" || month === "December") {
-            document.getElementById('result5').style.display = 'block';
+            character = "RAINBOW DASH";
+            resultHtml = '<p>RAINBOW DASH</p><img src="../img copy/rainbow.jpg" class="re">';
         }
+
+        modalContent.style.backgroundColor = characterColors[character]; 
+        modalBody.innerHTML = resultHtml;
+
+        var resultModal = new bootstrap.Modal(document.getElementById('resultModal'));
+        resultModal.show();
     });
 
     tryAgainButton.addEventListener('click', function() {
-        resultContainer.style.display = 'none';
+        var resultModal = bootstrap.Modal.getInstance(document.getElementById('resultModal'));
+        resultModal.hide();
         form.reset();
+        modalContent.style.backgroundColor = ''; 
     });
 });
+
 
     </script>
     
