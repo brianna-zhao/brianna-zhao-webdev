@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <title>Rarity</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border-radius: 10px;
+            overflow-x: hidden;
+            background: url('../img copy/rarhome.png') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: fantasy;
+            font-size: x-large;
+        }
+        .homenavbar {
+          font-family: fantasy;
+          font-size: x-large;
+          background-color: transparent;
+          position: fixed;
+          width: 100%;
+          top: 0; 
+          z-index: 1050; 
+        }
+        .homenavbar ul{
+            background-color: rgba(245, 245, 220, 0.843);
+            border-radius: 10px;
+            position: fixed;
+            top: 30px;
+            right: 10px;
+        }
+        .homenavbar ul li:hover{
+            background-color: #ffe66a;
+            border-radius: 10px;
+
+        }
+        .dropdown-menu .dropdown-item:hover {
+        background-color: #ffe66a; 
+        color: hotpink;
+    }
+            #apple:hover{
+            background-color: rgba(252, 101, 1, 0.658);
+    }
+            #fluttershy:hover{
+        background-color: rgba(255, 182, 193, 0.897);
+    }
+            #pinky:hover{
+        background-color: rgba(244, 40, 142, 0.851);
+    }
+            #rarity:hover{
+        background-color: rgba(238, 130, 238, 0.947);
+    }
+            #sparkle:hover{
+        background-color: rgba(49, 2, 85, 0.813);
+    }  
+            #rainbow:hover{
+                background-color: lightblue;
+            }
+            #navbar-toggler{
+                background-color: rgba(245, 245, 220, 0.843);
+                color: rgba(245, 245, 220, 0.843);
+
+            }
+        .container {
+            width: 80%;
+            margin-top: 100px;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+        img.interactive {
+            width: 100%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        img.interactive:hover {
+            transform: scale(0.5);
+            transform: rotateX(30);
+        }
+        h1{
+        padding: 10px;
+        border-radius: 10px;
+        font-family: fantasy;
+        font-weight: bolder;
+        display: inline-block;
+        position: relative;
+        text-shadow: rgb(249, 38, 143);
+        background-color: rgba(62, 25, 126, 0.828);
+    color: #d26aff;
+        text-align: center;
+        margin-top: 100px;
+}
+body div p{
+    border-radius: 10px;
+    background-color: rgba(62, 25, 126, 0.828);
+    color: #d26aff;
+    padding: 20px;
+    width: 90%;
+    position: relative;
+    left:5%;
+    font-weight: bold;
+    font-size: large;
+}
+    </style>
+</head>
+<header>
+    <div class="navbar navbar-expand-lg homenavbar" data-bs-theme="home">
+        <div class="container-fluid ">
+          <a href="./home.html" class="navbar-brand">
+              <img src="../img copy/raritylogo.png">
+          </a>
+          <!-- This is our hidden(on larger screens) hamburger menu -->
+          <button
+          id="navbar-toggler"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="#navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle Navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav align-self-end px-4">
+              <li class="nav-item dropdown">
+                  <a
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    class="nav-link dropdown-toggle"
+                    >MAIN</a
+                  >
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="./home.html">HOME</a></li>
+                    <li><a class="dropdown-item" href="relationship.html">RELATINSHIPS</a></li>
+                    <li><a class="dropdown-item" href="./form.html">WHAT PONY R U</a></li>
+                    <li><a class="dropdown-item" href="background.html">BACKGROUND</a></li>
+                  </ul>
+                </li>
+              <!-- BEGIN DROPDOWN MENU ITEM -->
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  class="nav-link dropdown-toggle"
+                  >CHARACTERS</a
+                >
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" id="apple"href="apple.html">APPLEJACK</a></li>
+                  <li><a class="dropdown-item" id="fluttershy" href="fluttershy.html">FLUTTERSHY</a></li>
+                  <li><a class="dropdown-item" id="pinky" href="pinkypie.html">PINKY PIE</a></li>
+                  <li><a class="dropdown-item" id="rainbow" href="rainbow.html">RAINBOW DASH</a></li>
+                  <li><a class="dropdown-item" id="rarity"href="rarity.html">RARITY</a></li>
+                  <li><a class="dropdown-item" id="sparkle"href="twilightsparkle.html">TWILIGHT SPARKLE</a></li>
+                </ul>
+              </li>
+</header>
+<body>
+    <img src="../img copy/Raritymain.png" alt="Interactive Pony" class="interactive">
+    
+    <div class="container text-center mt-5">
+        <h1>This is Rarity</h1>
+         <p> Rarity is a glamorous and sophisticated unicorn from the animated series "My Little Pony." She stands out with her pristine white coat and a luxurious purple mane and tail, often styled with elegant curls that reflect her refined taste and love for beauty. Rarity's striking blue eyes are expressive, revealing her creative soul and compassionate heart.</p>
+
+        <p>Her cutie mark, a trio of gleaming blue diamonds, symbolizes her exceptional talent in finding beauty and her skill in fashion design. Rarity is the proprietor of the Carousel Boutique in Ponyville, where she creates stunning and unique garments not just for her friends and fellow ponies but also for clients from all over Equestria. Her designs are renowned for their elegance and flair, showcasing her dedication to her craft and her eye for detail.</p>
+            
+        <p>Rarity embodies the element of generosity. She is always willing to go out of her way to help others, often putting the needs of her friends above her own. Despite her flair for the dramatic and a penchant for perfectionism, Rarity's generosity shines through in everything she does, from offering fashion advice to giving away her creations to those in need.</p>
+            
+        <p>Her adventures often involve lessons on balancing her ambition with her altruism, teaching viewers the importance of kindness, the beauty of self-expression, and the value of friendship. Rarity's character is a testament to the idea that true beauty comes from within and that generosity and empathy are among the most exquisite traits one can possess.</p>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
